@@ -24,13 +24,6 @@ Una moderna plataforma de delivery construida con Laravel, Livewire y Tailwind C
 ![Productos Destacados](screenshots/11-image.png)
 
 
-### 👨‍💼 Panel de Administración
-- **11-admin-dashboard.png** - Dashboard principal con métricas
-- **12-admin-products-management.png** - Gestión de productos
-- **13-admin-orders-management.png** - Gestión de pedidos
-- **14-admin-categories-management.png** - Administración de categorías
-- **15-admin-franchises.png** - Sistema de franquicias
-
 #### Dashboard
 ![Dashboard](screenshots/05-image.png)
 
