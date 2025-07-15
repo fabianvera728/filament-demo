@@ -1,0 +1,178 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Franchise;
+use App\Models\Zone;
+
+class FranchiseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $zones = Zone::all();
+        
+        $franchises = [
+            [
+                'name' => 'Domisoft Centro Bogotá',
+                'code' => 'DOM-BOG-01',
+                'description' => 'Franquicia principal del centro de Bogotá',
+                'address' => 'Carrera 7 #14-23, Centro, Bogotá',
+                'phone' => '+57 1 342 5678',
+                'email' => 'centro.bogota@domisoft.com',
+                'latitude' => 4.5981,
+                'longitude' => -74.0758,
+                'commission_percentage' => 15.0,
+                'opening_time' => '07:00:00',
+                'closing_time' => '23:00:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 8.0,
+                'minimum_order_amount' => 18000,
+                'is_active' => true,
+                'manager_name' => 'Carlos Mendoza',
+                'manager_phone' => '+57 311 234 5678',
+            ],
+            [
+                'name' => 'Domisoft Zona Norte',
+                'code' => 'DOM-BOG-02',
+                'description' => 'Franquicia de la zona norte de Bogotá',
+                'address' => 'Calle 85 #15-32, Usaquén, Bogotá',
+                'phone' => '+57 1 531 7890',
+                'email' => 'norte.bogota@domisoft.com',
+                'latitude' => 4.7110,
+                'longitude' => -74.0721,
+                'commission_percentage' => 12.5,
+                'opening_time' => '08:00:00',
+                'closing_time' => '22:00:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 10.0,
+                'minimum_order_amount' => 25000,
+                'is_active' => true,
+                'manager_name' => 'María García',
+                'manager_phone' => '+57 312 345 6789',
+            ],
+            [
+                'name' => 'Domisoft El Poblado',
+                'code' => 'DOM-MED-01',
+                'description' => 'Franquicia exclusiva de El Poblado, Medellín',
+                'address' => 'Carrera 43A #5-120, El Poblado, Medellín',
+                'phone' => '+57 4 268 9012',
+                'email' => 'poblado.medellin@domisoft.com',
+                'latitude' => 6.2088,
+                'longitude' => -75.5648,
+                'commission_percentage' => 18.0,
+                'opening_time' => '09:00:00',
+                'closing_time' => '24:00:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 6.0,
+                'minimum_order_amount' => 30000,
+                'is_active' => true,
+                'manager_name' => 'Andrés Ramírez',
+                'manager_phone' => '+57 314 567 8901',
+            ],
+            [
+                'name' => 'Domisoft Centro Medellín',
+                'code' => 'DOM-MED-02',
+                'description' => 'Franquicia del centro de Medellín',
+                'address' => 'Calle 52 #50-32, Centro, Medellín',
+                'phone' => '+57 4 215 3456',
+                'email' => 'centro.medellin@domisoft.com',
+                'latitude' => 6.2442,
+                'longitude' => -75.5812,
+                'commission_percentage' => 14.0,
+                'opening_time' => '07:30:00',
+                'closing_time' => '22:30:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+                'delivery_radius_km' => 7.5,
+                'minimum_order_amount' => 20000,
+                'is_active' => true,
+                'manager_name' => 'Luisa Fernández',
+                'manager_phone' => '+57 315 678 9012',
+            ],
+            [
+                'name' => 'Domisoft Granada Cali',
+                'code' => 'DOM-CAL-01',
+                'description' => 'Franquicia de la zona Granada en Cali',
+                'address' => 'Calle 16 Norte #9N-15, Granada, Cali',
+                'phone' => '+57 2 668 7890',
+                'email' => 'granada.cali@domisoft.com',
+                'latitude' => 3.4516,
+                'longitude' => -76.5320,
+                'commission_percentage' => 16.0,
+                'opening_time' => '08:30:00',
+                'closing_time' => '23:30:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 9.0,
+                'minimum_order_amount' => 22000,
+                'is_active' => true,
+                'manager_name' => 'Roberto Silva',
+                'manager_phone' => '+57 316 789 0123',
+            ],
+            [
+                'name' => 'Domisoft Centro Cali',
+                'code' => 'DOM-CAL-02',
+                'description' => 'Franquicia del centro histórico de Cali',
+                'address' => 'Carrera 5 #12-45, Centro, Cali',
+                'phone' => '+57 2 885 4321',
+                'email' => 'centro.cali@domisoft.com',
+                'latitude' => 3.4372,
+                'longitude' => -76.5225,
+                'commission_percentage' => 13.5,
+                'opening_time' => '07:00:00',
+                'closing_time' => '22:00:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+                'delivery_radius_km' => 8.5,
+                'minimum_order_amount' => 18500,
+                'is_active' => true,
+                'manager_name' => 'Carmen López',
+                'manager_phone' => '+57 317 890 1234',
+            ],
+            [
+                'name' => 'Domisoft Zona Rosa',
+                'code' => 'DOM-BOG-03',
+                'description' => 'Franquicia de la Zona Rosa, Bogotá',
+                'address' => 'Carrera 13 #85-32, Zona Rosa, Bogotá',
+                'phone' => '+57 1 621 9876',
+                'email' => 'zonarosa.bogota@domisoft.com',
+                'latitude' => 4.6697,
+                'longitude' => -74.0628,
+                'commission_percentage' => 17.5,
+                'opening_time' => '10:00:00',
+                'closing_time' => '02:00:00',
+                'operating_days' => ['miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 5.5,
+                'minimum_order_amount' => 35000,
+                'is_active' => true,
+                'manager_name' => 'Diego Morales',
+                'manager_phone' => '+57 318 901 2345',
+            ],
+            [
+                'name' => 'Domisoft Zona Sur',
+                'code' => 'DOM-BOG-04',
+                'description' => 'Franquicia de la zona sur de Bogotá',
+                'address' => 'Autopista Sur #45-67, Bosa, Bogotá',
+                'phone' => '+57 1 456 7890',
+                'email' => 'sur.bogota@domisoft.com',
+                'latitude' => 4.4716,
+                'longitude' => -74.1094,
+                'commission_percentage' => 11.0,
+                'opening_time' => '06:30:00',
+                'closing_time' => '21:30:00',
+                'operating_days' => ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'],
+                'delivery_radius_km' => 12.0,
+                'minimum_order_amount' => 15000,
+                'is_active' => true,
+                'manager_name' => 'Ana Rodríguez',
+                'manager_phone' => '+57 319 012 3456',
+            ],
+        ];
+
+        foreach ($franchises as $franchise) {
+            Franchise::create($franchise);
+        }
+    }
+}
